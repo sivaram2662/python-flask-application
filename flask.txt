@@ -1,0 +1,30 @@
+first we have to create one ec2-instance 
+security-groups
+===============
+ssh-22--my ip 
+tcp-5000--anywhere
+
+login to server and we shift the root user and we install prerequist commands:
+
+command :
+========
+
+1)  yum  install python3 -y
+2)  pip3 install flask
+
+3)  vi app1.py inside the file to copy thye content 
+
+ from flask import Flask
+
+app = Flask(__name__)
+@app.route("/")
+def homepage():
+    return "<h1>hello this is python flask<h1>"
+if __name__ =="__main__":
+    app.run(host='0.0.0.0',port=5000)
+
+4) python3 app1.py
+
+5) copy the public ip :5000 to serch the browser 
+
+
